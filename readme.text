@@ -1,0 +1,9 @@
+I have used the python3 for this assignment
+1. we need to install pandas or numpy library from requirement file
+   to install package write : pip install -r requirement.txt
+2. The main code will be in assignment.py file , I make the code based in the data that was given.
+   It's the optimize code , I completed the without using any for loop
+   to run code :  python assignment.py
+   output : It will give count of different BMI Category
+3. this testcase file is  test.py, I use unittest library to create test cases.
+   to run testcase : python test.py
