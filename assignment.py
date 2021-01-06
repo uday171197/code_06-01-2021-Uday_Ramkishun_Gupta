@@ -30,7 +30,7 @@ def find_category(x,y):
 def main(data):
     # data = [{"Gender": "Male", "HeightCm": 171, "WeightKg": 96 },{ "Gender": "Male", "HeightCm": 161, "WeightKg": 85 },{ "Gender": "Male", "HeightCm": 180, "WeightKg": 77 },{ "Gender": "Female", "HeightCm": 166, "WeightKg": 62},{"Gender": "Female", "HeightCm": 150, "WeightKg": 70},{"Gender": "Female", "HeightCm": 167, "WeightKg": 82}]
     df = pd.DataFrame(data)
-    df['BMI'] = np.vectorize(lambda x,y: round(y/(x*0.01),1))(df['HeightCm'],df['WeightKg'])
+    df['BMI'] = np.vectorize(lambda x,y: round(y/((x*0.01)**2),1))(df['HeightCm'],df['WeightKg'])
     df['BMI Category'] = np.vectorize(find_category)(df['BMI'],0)
     df['Health risk'] = np.vectorize(find_category)(df['BMI'],1)
     # df[df['BMI Category'] == 'Overweight' ]
